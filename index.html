@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数海导航 - 高中数学学习平台</title>
+  <link rel="stylesheet" href="css/style.css">
+  </head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <span class="logo-icon">∫</span>
+      <span>数海导航</span>
+    </a>
+    <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">首页</a></li>
+      <li><a href="pages/theory.html">理论学习</a></li>
+      <li><a href="pages/practice.html">题库训练</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <h1>征服高中数学</h1>
+    <p>系统化知识体系 + 5000+ 道精选题目</p>
+    <div class="hero-btns">
+      <a href="pages/theory.html" class="btn btn-primary">开始学习</a>
+      <a href="pages/practice.html" class="btn btn-secondary">题库训练</a>
+    </div>
+  </section>
+  <section class="features">
+    <h2>主要功能</h2>
+    <div class="feature-grid">
+      <div class="feature-card" onclick="location.href='pages/theory.html'">
+        <div class="icon">---</div>
+        <h3>理论学习</h3>
+        <p>8大章节，全面覆盖高中数学知识点</p>
+        <span class="tag">详细学习</span>
+      </div>
+      <div class="feature-card" onclick="location.href='pages/practice.html'">
+        <div class="icon">---</div>
+        <h3>题库训练</h3>
+        <p>5000+ 精选题目，含历年高考真题</p>
+        <span class="tag">智能练习</span>
+      </div>
+      <div class="feature-card" onclick="location.href='pages/practice.html'">
+        <div class="icon">---</div>
+        <h3>真题浏览</h3>
+        <p>3000+ 道历年高考真实试题</p>
+        <span class="tag">浏览真题</span>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>© 2026 数海导航</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
