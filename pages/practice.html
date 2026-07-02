@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>题库训练 - 数海导航</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  </head>
+<body>
+  <nav class="navbar">
+    <a href="../index.html" class="nav-brand">
+      <span class="logo-icon">∫</span>
+      <span>数海导航</span>
+    </a>
+    <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">首页</a></li>
+      <li><a href="theory.html">理论学习</a></li>
+      <li><a href="practice.html" class="active">题库训练</a></li>
+    </ul>
+  </nav>
+  <div class="breadcrumb">
+    <a href="../index.html">首页</a>
+    <span class="sep">/</span>
+    <span>题库训练</span>
+  </div>
+  <div class="page-header">
+    <h1>题库训练</h1>
+    <p>精选高中数学题目，按知识点分类练习，智能批改 + 详细解析</p>
+  </div>
+  <div class="content-section">
+    <div class="practice-controls">
+      <select id="topicFilter">
+        <option value="all">全部知识点</option>
+        <option value="集合与逻辑">集合与逻辑</option>
+        <option value="函数">函数</option>
+        <option value="三角函数">三角函数</option>
+        <option value="数列">数列</option>
+        <option value="立体几何">立体几何</option>
+        <option value="解析几何">解析几何</option>
+        <option value="概率统计">概率统计</option>
+        <option value="导数">导数</option>
+      </select>
+      <select id="difficultyFilter">
+        <option value="all">全部难度</option>
+        <option value="easy">★ 基础</option>
+        <option value="medium">★★ 中等</option>
+        <option value="hard">★★★ 困难</option>
+      </select>
+      <button class="btn btn-primary" onclick="startPractice()">开始练习</button>
+      <button class="btn btn-secondary" onclick="resetPractice()">重置</button>
+    </div>
+    <div id="modeInfo" style="margin-bottom:1rem;"></div>
+    <div class="practice-stats" id="practiceStats" style="display:none;">
+      <div class="stat-item">
+        <div class="stat-value" id="qNum">0</div>
+        <div class="stat-label">已答题</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="correctNum">0</div>
+        <div class="stat-label">正确</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="accuracy">0%</div>
+        <div class="stat-label">正确率</div>
+      </div>
+    </div>
+    <div id="questionArea">
+      <div class="empty-state">
+        <div class="empty-icon">---</div>
+        <p>选择知识点和难度，点击开始练习</p>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>© 2026 数海导航</p>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/questions.js"></script>
+  <script src="../js/practice.js"></script>
+</body>
+</html>
